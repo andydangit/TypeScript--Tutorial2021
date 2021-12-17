@@ -4,16 +4,17 @@
 //     age: number
 // } 
 
-const person: { 
-    name: string;
-    age: number;
-    hobbies: string[];
-    role: [number, string];
-} = { 
+enum Role {
+    Admin, 
+    Read_Only, 
+    Author
+};
+
+const person = {  
     name: 'Andy',
     age: 20,
     hobbies: ['Sports', "Cooking"],
-    role: [2, 'author']  
+    role: Role.Admin
 };
 
 // person.role.push('admin'); // this is an exception 
@@ -22,12 +23,13 @@ const person: {
 
 let favoriteActivities: string[];
 favoriteActivities = ['Sports'];
-
 console.log(person.name);
 
 for (const hobby of person.hobbies) {
     console.log(hobby.toUpperCase());
-    // console.log(hobby.map());  // !!! ERROR !!!
-    
-    
-}
+    // console.log(hobby.map());  // !!! ERROR !!!  
+};
+
+if(person.role === Role.Admin) {
+    console.log(('is admin')); 
+};
