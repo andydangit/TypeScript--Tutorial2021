@@ -1,35 +1,15 @@
-// This could be done but it's better to let Typescript infer it
-// const person: {
-//     name: string;
-//     age: number
-// } 
+function combine(input1: number | string, input2: number | string) {
+  let result;
+  if (typeof input1 === "number" && typeof input2 === "number") {
+    result = input1 + input2;
+  } else { 
+      result = input1.toString() + input2.toString();
+  }
+  return result;
+}
 
-enum Role {
-    Admin, 
-    Read_Only, 
-    Author
-};
+const combineAge = combine(30, 26);
+console.log(combineAge);
 
-const person = {  
-    name: 'Andy',
-    age: 20,
-    hobbies: ['Sports', "Cooking"],
-    role: Role.Admin
-};
-
-// person.role.push('admin'); // this is an exception 
-// person.role[1] = 10; // this does not work
-
-
-let favoriteActivities: string[];
-favoriteActivities = ['Sports'];
-console.log(person.name);
-
-for (const hobby of person.hobbies) {
-    console.log(hobby.toUpperCase());
-    // console.log(hobby.map());  // !!! ERROR !!!  
-};
-
-if(person.role === Role.Admin) {
-    console.log(('is admin')); 
-};
+const combineNames = combine("Max", "Anna");
+console.log(combineNames);
