@@ -11,3 +11,6 @@ Unknown - it is better strict and better to use compare to "Any" <br />
 
 # Function 
 Void -  if there is no return in a function use Void
+
+# Watch Mode
+-   npx tsc "Files Name" -w
