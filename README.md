@@ -14,3 +14,8 @@ Void -  if there is no return in a function use Void
 
 # Watch Mode
 -   npx tsc "Files Name" -w
+
+# Convert all files from typescript to JavaScript 
+-   npx tsc --init
+-   npx tsc 
+-   npx tsc -w
