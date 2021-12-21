@@ -1,2 +1,3 @@
-var userName = "Max";
+"use strict";
+const userName = "Max";
 console.log(userName);
